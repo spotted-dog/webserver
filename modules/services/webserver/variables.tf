@@ -24,6 +24,10 @@ variable "ssh_cidr_block" {
   description = "SSH CIDR block (i.e. 0.0.0.0/0)"
 }
 
+variable "key_pair_name" {
+  description = "Existing key pair name in same region as the EC2 instance"
+}
+
 variable "region_to_ami" {
   description = "Mapping of AWS region to an AMI to use"
   type = "map"

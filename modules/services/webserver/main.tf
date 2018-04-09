@@ -86,7 +86,7 @@ resource "aws_security_group_rule" "allow_ssh_inbound" {
   from_port         = 22
   to_port           = 22
   protocol          = "tcp"
-  cidr_blocks       = [${var.ssh_cidr_block}]
+  cidr_blocks       = ["${var.ssh_cidr_block}"]
 
   security_group_id = "${aws_security_group.webserver-sg.id}"
 }
@@ -107,6 +107,7 @@ resource "aws_instance" "web-server" {
   instance_type          = "${var.instance_type}"
   vpc_security_group_ids = ["${aws_security_group.webserver-sg.id}"]
   subnet_id              = "${aws_subnet.subnet_public.id}"
+  key_name               = "${var.key_pair_name}"
 
   tags {
     "Name"        = "${var.cluster_name}-${var.environment}-webserver-sg"

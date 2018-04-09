@@ -34,3 +34,7 @@ variable "public_subnet_cidr_block" {
 variable "ssh_cidr_block" {
   description = "SSH CIDR block (i.e. 0.0.0.0/0)"
 }
+
+variable "key_pair_name" {
+  description = "Existing key pair name in same region as the EC2 instance"
+}

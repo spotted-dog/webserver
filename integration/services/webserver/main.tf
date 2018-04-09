@@ -15,5 +15,6 @@ module "webserver" {
   environment               = "${var.environment}"
   public_subnet_cidr_block  = "${var.public_subnet_cidr_block}"
   ssh_cidr_block            = "${var.ssh_cidr_block}"
+  key_pair_name             = "${var.key_pair_name}"
   instance_type             = "t2.micro"
 }

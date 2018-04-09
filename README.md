@@ -88,7 +88,7 @@ You can verify the S3 bucket by logging into the AWS console for digital-rig, go
 
 Next you need to create all the Infrastructure (networking, routes, security, instance, etc...). This project creates a new VPC so everything is isolated and self contained.
 
-### 1.1 Build the Infrastructure
+### 2.1 Build the Infrastructure
 
 You need to know your IP. You can get that IP address at [CheckIP](http://checkip.amazonaws.com). Once you have your IP, you need to build the infrastructure.
 
@@ -106,3 +106,5 @@ You will be prompted for the following information:
   * Provide an absolute path to the AWS credentials file on your local workstation
 * SSH IP CIDR
   * Enter: <ip address from ckeckip>/32 or any other valid CIDR
+* Key pair name
+  * Enter: <valid key pair name from region>
