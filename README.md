@@ -40,6 +40,14 @@ This is an open sources free tool for managing Terraform configurations. There a
 brew install terragrunt
 ```
 
+### Ansible
+
+[Ansible](https://www.ansible.com) is an open source configuration management tool. This project will use it to install and configure Nginx. There are many ways and options for how you could install Nginx - this is just one of them.
+
+```
+brew install ansible
+```
+
 ## Build
 
 ### 1. Setup Remote State Management
@@ -108,3 +116,16 @@ You will be prompted for the following information:
   * Enter: <ip address from ckeckip>/32 or any other valid CIDR
 * Key pair name
   * Enter: <valid key pair name from region>
+
+### 3. Setup Nginx
+
+Next you need to configure an nginx web server on the ec2 instance. This project is using Ansible for configuration management.
+
+### 3.1 Run configuration
+
+```
+cd <project_root_dir>/ansible/playbook
+ansible-playbook web-notls.yml
+```
+
+where 'project_root_dir' is the directory where you checked this source out to.
